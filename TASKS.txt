@@ -1,0 +1,5 @@
+
+1. When username is taken
+	-> change message color to RED "Username already taken. Please choose another one"
+
+2.

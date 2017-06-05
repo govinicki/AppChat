@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="/static/alertifyjs/build/css/alertify.min.css">
+        <link rel="stylesheet" href="/static/alertifyjs/build/css/themes/default.min.css">
+        <script src="/static/alertifyjs/build/alertify.min.js"></script>
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <title>Chat using Socket.IO and WebRTC</title>
+    </head>
+    
+    <body>
+        
+        <ul class="pages">
+            
+            <li class="chat page">
+                <div class="chatArea">
+                    <ul class="messages"></ul>
+                </div>
+                <input class="inputMessage" placeholder="Type here..."/>
+            </li>
+            
+            <li class="login page">
+                <div class="form">
+                    <input class="usernameInput" type="image" src="/static/login-button-png-3.png" onclick="login();">
+                </div>
+            </li>
+            
+            <li class="purgatory page">
+                <div class="purgatory"></div>
+            </li>
+            
+        </ul>
+        
+        <script src="/socket.io/socket.io.js"></script> 
+        <script src="/static/script.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <!-- Adapter JS needed -->
+        
+    </body>   
+</html>
