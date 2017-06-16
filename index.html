@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
 <html>
     
@@ -8,6 +8,8 @@
         <script src="/static/alertifyjs/build/alertify.min.js"></script>
         <link rel="stylesheet" href="/static/style.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- WebRTC adapter to insulate app from spec changes and prefix differences -->
+        <script src="/static/webrtc-adapter/out/adapter.js"></script> 
         <title>Chat using Socket.IO and WebRTC</title>
     </head>
     
@@ -19,12 +21,26 @@
                 <div class="chatArea">
                     <ul class="messages"></ul>
                 </div>
-                <input class="inputMessage" placeholder="Type here..."/>
+                <div class="messageInputArea">
+                    <input class="inputMessage" placeholder="Type here..."/>
+                </div>
+                <div class="buttons">
+                    
+                    <input class="createRoomButton" type="image" src="/static/gears.png" onclick="createRoom();" title="Create Room">
+                    <br>
+                    <input class="joinRoomButton" type="image" src="/static/arrowJoin.png" onclick="joinRoom();" title="Join Room">
+                    
+                </div>
+                <div class="roomLinks" title="Available Rooms">
+                    <ul class="roomList">
+                        <li>-------</li>
+                    </ul>
+                </div>
             </li>
             
             <li class="login page">
                 <div class="form">
-                    <input class="usernameInput" type="image" src="/static/login-button-png-3.png" onclick="login();">
+                    <input class="usernameInput" type="image" src="/static/enter-button-blue-glass.png" onclick="login();">
                 </div>
             </li>
             
@@ -32,12 +48,20 @@
                 <div class="purgatory"></div>
             </li>
             
+            <li class="room page">
+                <div class="room"></div>
+                <div class="leaveButton">
+                    <input class="leave room" type="button" value="Leave" onclick="leaveRoom();">
+                    <br>
+                    <input class="destroy room" type="button" value="Destroy" onclick="destroyRoom();">
+                </div>
+                <div class="videos"></div>
+            </li>
+            
         </ul>
         
         <script src="/socket.io/socket.io.js"></script> 
         <script src="/static/script.js"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <!-- Adapter JS needed -->
-        
     </body>   
 </html>

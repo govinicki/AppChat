@@ -48,6 +48,7 @@ ul {
 
 .login.page {
   background-color: #000;
+    overflow: hidden;
 }
 
 .login.page .form {
@@ -93,6 +94,7 @@ ul {
 
 .messages {
   font-size: 150%;
+    overflow: auto;
 }
 
 .inputMessage {
@@ -110,8 +112,13 @@ ul {
 /* Messages */
 
 .chatArea {
-  height: 100%;
+  height: 90%;
   padding-bottom: 60px;
+                        width: 80%;
+}
+
+.messageInputArea {
+    width: 80%;
 }
 
 .messages {
@@ -132,6 +139,32 @@ ul {
   text-align: right;
 }
 
+.buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 20%;
+}
+.createRoomButton {
+    height: 70%;
+    width: 50%;
+}
+.joinRoomButton {
+    height: 90%;
+    widows: 90%;
+}
+
+
+.roomLinks {
+    height: 200px;
+    width: 19%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 10px solid #4286f4;
+}
+
 /* Input */
 
 .inputMessage {
@@ -143,10 +176,133 @@ ul {
   padding-left: 10px;
   position: absolute;
   right: 0;
-  width: 100%;
+                        width: 80%;
 }
 
 .purgatory.page {
     display: none;
     background-color: #000;
 }
+
+.room.page {
+    display: none;
+    background-color: dimgrey;
+}
+
+.leaveButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+/* custom notify */
+.ajs-message.ajs-custom { 
+    color: #31708f;  
+    background-color: #d9edf7;  
+    border-color: #31708f; 
+}
+
+
+
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+
+
+.form:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;    
+}
+
+.createRoomButton:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3)
+}
+.joinRoomButton:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

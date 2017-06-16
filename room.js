@@ -11,6 +11,10 @@ Room.prototype.addPerson = function(personID) {
         this.people.push(personID);
     }
 };
+Room.prototype.removePerson = function(personID) {
+    var index = this.people.indexOf(personID);
+    this.people.splice(index,1);
+}
 
 
 module.exports = Room;
